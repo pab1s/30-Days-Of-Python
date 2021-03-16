@@ -82,6 +82,7 @@ def extract_incoming_mails(s):
             line = line.replace("From:", "")
             line = line.strip()
             unique_emails.add(line)
+    file.close()
     return unique_emails
 
 
@@ -180,7 +181,7 @@ def python_in_csv(s):
             for sentence in row:
                 if 'Python' in sentence or 'python' in sentence:
                     python_count += 1
-                if 'Javascript' in sentence or 'javascript' in sentence or 'JavaScript in sentence':
+                if 'Javascript' in sentence or 'javascript' in sentence or 'JavaScript' in sentence:
                     js_count += 1
                 if 'Java' in sentence or 'java' in sentence:
                     java_count += 1
