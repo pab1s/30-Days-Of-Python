@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container">
+    <h1>Text Analysis Result </h1>
+    <ul class="analyzer">
+        <li class="analyzer">Total number of words: {{nwords}}</li>
+        <li class="analyzer"> Number of character: {{nch}}</li>
+        <li class="analyzer">The most frequent word: {{m}}</li>
+        <li class="analyzer"> The word variety(lexical density): {{ld}} %</li>
+    </ul>
+    {% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+    {% endfor %}
+</div>
+
+
+{% endblock %}
